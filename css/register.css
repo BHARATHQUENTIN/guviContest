@@ -1,0 +1,60 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: #c5e4e4;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.border {
+    border-radius: 50px;
+}
+
+.rounded-pill-input {
+    border-radius: 1.25rem;
+    transition: background-color 0.3s ease;
+}
+
+.rounded-pill-input:hover {
+    background-color: #ffffff;
+}
+
+
+
+.custom-input {
+    width: 300px;
+}
+
+#button,
+#button2 {
+    width: 220px;
+    background-color: #57b846;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#button:hover,
+#button2:hover {
+    background-color: black;
+    transform: translateY(-3px);
+}
+
+.custom-input input[type="email"]:not(:focus) + label,
+.custom-input input[type="password"]:not(:focus) + label {
+    color: gray;
+}
+
+.custom-input input[type="email"]:hover + label,
+.custom-input input[type="password"]:hover + label {
+    color: black;
+}
+
+
+
+ 
+
+.custom-input select:hover {
+    background-color: #ffffff;
+}

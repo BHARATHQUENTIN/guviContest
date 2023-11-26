@@ -1,0 +1,95 @@
+body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      background-color: #c5e4e4;
+      font-family: 'Poppins', sans-serif;
+      font-weight:300px;
+    }
+
+
+    .border{
+       border-radius: 50px;
+    }
+
+    .rounded-pill-input {
+      border-radius: 1.25rem; 
+  }
+
+
+
+  .rounded-pill-input {
+   border-radius: 1.25rem; 
+   
+   transition: background-color 0.3s ease; 
+}
+
+.rounded-pill-input:hover {
+   background-color: #ffffff; 
+}
+
+
+
+
+.custom-input {
+   width: 300px; 
+}
+
+#button {
+   width: 220px;
+   background-color: #57b846;
+   transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#button:hover {
+   background-color: black;
+   transform: translateY(-3px);
+}
+
+#button2{
+   width: 220px;
+   background-color: #57b846;
+   transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#button2:hover {
+   background-color: black;
+   transform: translateY(-3px);
+}
+
+.custom-input input[type="email"]:not(:focus) + label {
+   color: gray;
+}
+
+.custom-input input[type="email"]:hover + label {
+   color: black;
+}
+
+.custom-input input[type="password"]:not(:focus) + label {
+   color: gray;
+}
+
+.custom-input input[type="password"]:hover + label {
+   color: black;
+}
+
+
+.custom-alert {
+   display: none;
+   position: fixed;
+   top: 20px;
+   left: 50%;
+   transform: translateX(-50%);
+   padding: 15px;
+   background-color: #4CAF50;
+   color: #fff;
+   border-radius: 5px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.alert-text {
+   font-size: 18px;
+}
+

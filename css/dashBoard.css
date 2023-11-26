@@ -1,0 +1,10 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  }
+
+ .nav-pills li a:hover {
+  background-color:#EBE3D5;
+ 
+ }
+ 
