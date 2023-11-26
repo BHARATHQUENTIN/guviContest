@@ -28,18 +28,7 @@ body {
     width: 300px;
 }
 
-#button,
-#button2 {
-    width: 220px;
-    background-color: #57b846;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
 
-#button:hover,
-#button2:hover {
-    background-color: black;
-    transform: translateY(-3px);
-}
 
 .custom-input input[type="email"]:not(:focus) + label,
 .custom-input input[type="password"]:not(:focus) + label {
