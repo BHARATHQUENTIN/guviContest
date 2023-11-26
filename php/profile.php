@@ -13,6 +13,23 @@ function connectToMongoDB()
     return $collection;
 }
 
+function getUserDetails()
+{
+    $redis = new Predis\Client();
+    $redisKey = "user";
+    $userEmail = $redis->hget($redisKey, 'emailAddress');
+    $userName = $redis->hget($redisKey, 'name');
+
+    $userData = [
+        'email' => $userEmail,
+        'name' => $userName,
+    ];
+
+    header('Content-Type: application/json');
+    echo json_encode($userData);
+}
+
+
 function fetchUserData($userEmail)
 {
     $response = ['success' => false];
@@ -145,6 +162,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $response = ['error' => 'User email not found in Redis.'];
     }
 }
+
+
 
 header('Content-Type: application/json');
 echo json_encode($response);
