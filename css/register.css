@@ -28,13 +28,19 @@ body {
     width: 300px;
 }
 
+.custom-input input[type="text"]:not(:focus) + label {
+    color: gray;
+}
 
 
+.custom-input input[type="text"]:not(:focus) + label,
 .custom-input input[type="email"]:not(:focus) + label,
 .custom-input input[type="password"]:not(:focus) + label {
     color: gray;
 }
 
+
+.custom-input input[type="text"]:not(:focus) + label,
 .custom-input input[type="email"]:hover + label,
 .custom-input input[type="password"]:hover + label {
     color: black;

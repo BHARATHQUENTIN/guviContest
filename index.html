@@ -4,107 +4,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-    <link href="css/dashBoard.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/profile.css">
-    <title>Edit Profile</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="js/profile.js"></script>
+
+    <link href="css/register.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+
+  
+
+ 
+     
+
 </head>
 
 <body>
+    <div class="container custom bg-white border p-5  shadow " style="max-width: 800px;">
+        <div class="row">
 
-    <div class="container-fluid">
-        <div class="row flex-nowrap">
-            <!-- Sidebar -->
-            <div id="sidebar" class="bg-secondary col-auto col-md-4 col-lg-3 min-vh-100 d-flex flex-column justify-content-between">
-                <div class="bg-secondary p-2">
-                    <span class="d-flex text-white mt-1 align-items-center text-white">
-                        <i class="bi bi-person fs-4 d-none d-sm-inline"></i>
-                        <span class="fs-4 d-none d-sm-inline">User Profile</span>
-                    </span>
-
-                    <ul class="nav nav-pills flex-column mt-4">
-                        <li class="nav-item py-2 py-md-0">
-                            <a href="profile.html" class="nav-link text-white" aria-current="page">
-                                <span class="d-flex align-items-center">
-                                    <img src="assets\images\profile.png" alt="Profile Picture"
-                                        class="rounded-circle me-2" style="width: 3em; height: 3em;">
-                                    <span class="d-none d-md-inline">Profile Settings</span>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="nav-item py-2 py-md-0">
-                            <a href="#" id="logoutBtn" class="nav-link text-white" aria-current="page">
-                                <img src="assets/images/shutdown.png" alt="Shutdown" class="bi bi-box-arrow-right-lg" style="width: 3em; height: 3em;">
-                                <span class="d-none d-md-inline">Logout</span>
-                            </a>
-                        </li>
-                        
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Main Content -->
-            <div class="col-md-8 col-lg-9 p-3">
-                <!-- All the right side contents -->
-                <h4 class="fw-bold text-center mb-5">Profile & Services</h4>
-                <div class="container p-3 p-md-5 border shadow">
-                    <div class="mb-5">
-                    <h4 class="fw-bold text-start ml-1 ">Profile Details</h4>
-                </div>
-                    <table class="table d-container justify-content-center">
-                        <tr>
-                            <td><strong>First Name</strong></td>
-                            <td><input type="text" id="firstName" class="form-control no-border" disabled></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Email</strong></td>
-                            <td><input type="text" id="email" class="form-control no-border" disabled></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Contact</strong></td>
-                            <td><input type="number" id="contact1" class="form-control no-border" disabled></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Age</strong></td>
-                            <td><input type="text" id="age1" class="form-control no-border" disabled></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Date of Birth</strong></td>
-                            <td><input type="date" id="dateOfBirth1" class="form-control no-border" disabled></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Address</strong></td>
-                            <td><input type="text" id="address1" class="form-control no-border" disabled></td>
-                        </tr>
-                    </table>
-
-                    <div class="container mt-4 d-flex justify-content-center">
-                        <button type="button" class="btn btn-success" data-bs-toggle="modal"
-                            data-bs-target="#editDetailsModal">
-                            <i class="bi bi-pencil-fill"></i> Edit Details
-                        </button>
+            <div class="col-md container justify-content-center mt-5  d-none d-md-block ">
+                <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                    <!-- Set data-bs-interval to the desired interval in milliseconds (3000ms = 3 seconds) -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active mt-5">
+                            <img src="assets/images/woman2.webp" class="d-block w-100" alt="Woman 1">
+                        </div>
+                        <div class="carousel-item mt-5">
+                            <img src="assets/images/woman3.webp" class="d-block w-100" alt="Woman 2">
+                        </div>
                     </div>
                 </div>
+            </div>
+            
+
+            <div class="col mt-5">
+                <!-- Signup Form -->
+
+                <form class="d-flex flex-column align-items-center" id="signupForm">
+
+                    <h4 class="header text-center fw-bold">Create your Account</h4>
+                    <div class="mt-3">
+                        <div class="mb-3">
+                            <div class="form-floating custom-input">
+                                <input type="text" class="form-control rounded-pill rounded-pill-input"name="firstName" id="firstName"
+                                    placeholder="First Name" required>
+                                <label for="firstName" class="email-label"><i class="bi bi-person-fill"></i>First Name</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="form-floating custom-input">
+                                <input type="text" class="form-control rounded-pill rounded-pill-input" name="lastName" id="lastName"
+                                    placeholder="Last Name" required>
+                                <label for="lastName" class="email-label"><i class="bi bi-person-fill"></i>Last Name</i></label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="form-floating custom-input">
+                                <input type="email" class="form-control rounded-pill rounded-pill-input"name="email" id="email"
+                                    placeholder="name@example.com" required>
+                                <label for="email" class="email-label"><i class="bi bi-envelope-fill"></i> Email
+                                    address</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="form-floating custom-input">
+                                <input type="password" class="form-control rounded-pill rounded-pill-input"
+                                    id="password" name="password" placeholder="Password" required>
+                                <label for="password" class="password-label"><i class="bi bi-lock-fill"></i>
+                                    Password</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="form-floating custom-input">
+                                <input type="password" class="form-control rounded-pill rounded-pill-input" name="passwordConfirm"
+                                    id="passwordConfirm" placeholder="Confirm Password" required>
+                                <label for="passwordConfirm" class="password-label"><i class="bi bi-lock-fill"></i>
+                                    Confirm Password</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-grid mb-3">
+                        <button type="submit" id="signupButton"
+                                class="btn  btn-success  rounded-pill text-white shadow ">Sign Up</button>
+                    </div>
+                    <div class="d-flex align-items-center mx-4 mt-3">
+                        <p class="text-dark mb-0">Already have an Account?</p>
+                        <button class="btn btn-success rounded-pill text-white shadow" onclick="redirectToLogin()">Login</button>
+                    </div>
+                </form>
+                
+               
+                
+                
             </div>
         </div>
     </div>
 
-    <!-- Toggle button for smaller screens -->
-    <button class="btn btn-primary d-block d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
-        Toggle Sidebar
-    </button>
 
-    <!-- Bootstrap offcanvas JavaScript -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+     <script src="js/register.js"></script> 
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+
+
+
+
 </body>
 
 </html>
